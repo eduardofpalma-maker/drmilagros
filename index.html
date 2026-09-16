@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Milagro's | Ecossistema Biotecnológico & Gênesis Tech</title>
     
-    <!-- PWA & Favicon -->
+    <!-- Meta & PWA -->
     <meta name="theme-color" content="#C9A84C">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Dr. Milagro's">
     <meta name="google-site-verification" content="9MNSLiIQmSknQ95ay0GglvgJjdoIwZruZ8MQUQewhGg">
 
-    <!-- Fontes Soberanas -->
+    <!-- Design & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -37,10 +37,7 @@
             padding: 20px 15px;
         }
 
-        .portal-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .portal-container { max-width: 900px; margin: 0 auto; }
 
         header {
             text-align: center;
@@ -128,10 +125,7 @@
             padding-bottom: 8px;
         }
 
-        .section-number {
-            color: var(--neon-blue);
-            font-size: 0.9rem;
-        }
+        .section-number { color: var(--neon-blue); font-size: 0.9rem; }
 
         .content-box {
             background: rgba(255, 255, 255, 0.02);
@@ -176,9 +170,7 @@
             text-align: center;
         }
 
-        .btn-checkout:hover {
-            box-shadow: 0 0 12px var(--gold-accent);
-        }
+        .btn-blue { background: var(--neon-blue); color: #000; }
 
         .video-grid {
             display: flex;
@@ -244,7 +236,7 @@
                 <h2 class="section-header"><span class="section-number">01</span> Método das Sete Lâmpadas</h2>
                 <div class="content-box">
                     <h4>Convergência Fotônica e Molecular</h4>
-                    <p>Integração de procaína com fotobiomodulação celular, soroterapia, fisioterapia robótica, fortalecimento, terapia ocupacional, psicologia e nutrição integrada.</p>
+                    <p>Integração de procaína com fotobiomodulação celular, soroterapia, fisioterapia robótica, fortalecimento muscular, terapia ocupacional, acompanhamento psicológico e nutrição integrada.</p>
                 </div>
             </section>
 
@@ -253,27 +245,29 @@
                 <h2 class="section-header"><span class="section-number">02</span> Protocolos Fotônicos (Lâmpadas 04 a 07)</h2>
                 <div class="content-box">
                     <h4>Lâmpada 04 — Fotobiomodulação Celular</h4>
-                    <p>Atendimento fotônico via aplicativo com Robô Edward Avatar.</p>
+                    <p>Atendimento fotônico contínuo via aplicativo com suporte do Avatar Robô Edward.</p>
                     <span class="price-tag">R$ 149</span>
+                    <button class="btn-checkout" onclick="iniciarCheckout('Lâmpada 04 - Fotobiomodulação', 149)">Adquirir Protocolo (R$ 149)</button>
                 </div>
                 <div class="content-box">
                     <h4>Lâmpada 05 — Reabilitação Assistida por Robótica</h4>
-                    <p>Fisioterapia (R$ 149), Fortalecimento (R$ 99) e Terapia Ocupacional (R$ 99) com Robô Edward Avatar.</p>
+                    <p>Fisioterapia de regeneração (R$ 149), Fortalecimento motor (R$ 99) e Terapia Ocupacional (R$ 99) guiadas pelo Avatar Robô Edward.</p>
                 </div>
                 <div class="content-box">
                     <h4>Lâmpada 06 — Bioacupuntura Sistêmica</h4>
-                    <p>Estimulação bioenergética de precisão.</p>
+                    <p>Estimulação bioenergética e modulação celular de precisão.</p>
                     <span class="price-tag">R$ 149</span>
+                    <button class="btn-checkout" onclick="iniciarCheckout('Lâmpada 06 - Bioacupuntura', 149)">Adquirir Protocolo (R$ 149)</button>
                 </div>
                 <div class="content-box">
                     <h4>Lâmpada 07 — Saúde Mental & Nutrição Integrada</h4>
-                    <p>Psicologia (R$ 149) + Nutrição Aplicada (R$ 149).</p>
+                    <p>Acompanhamento de psicologia preventiva (R$ 149) e plano de nutrição molecular (R$ 149).</p>
                 </div>
                 <div class="content-box highlight-box">
                     <h4>Combo Imperador</h4>
-                    <p>Acesso completo a todos os protocolos fotônicos integrados.</p>
+                    <p>Acesso completo e integrado a todos os protocolos fotônicos do Método das Sete Lâmpadas.</p>
                     <span class="price-tag">R$ 497</span>
-                    <button class="btn-checkout" onclick="iniciarCheckout('Combo Imperador', 497)">Adquirir Combo Imperador</button>
+                    <button class="btn-checkout" onclick="iniciarCheckout('Combo Imperador', 497)">Adquirir Combo Imperador (R$ 497)</button>
                 </div>
             </section>
 
@@ -282,7 +276,7 @@
                 <h2 class="section-header"><span class="section-number">03</span> ACS &bull; Arsenal Clínico Salomão</h2>
                 <div class="content-box">
                     <h4>Experiência de Conexão Soberana (7 Vídeos de 21s)</h4>
-                    <p>Sete iluminações em vídeo de 21 segundos de alta profundidade para alinhar razão, saúde e espírito diretamente ao Reino.</p>
+                    <p>Sete pílulas em vídeo de 21 segundos com alta profundidade espiritual e científica, desenhadas para alinhar a razão, a saúde física e o espírito diretamente ao Reino do Criador (Unidade e Perfeição Divina).</p>
                     <div class="video-grid">
                         <div class="video-badge">Vídeo 01 &bull; 21s</div>
                         <div class="video-badge">Vídeo 02 &bull; 21s</div>
@@ -293,6 +287,10 @@
                         <div class="video-badge">Vídeo 07 &bull; 21s</div>
                     </div>
                 </div>
+                <div class="content-box">
+                    <h4>Módulo de Regeneração e Protocolo Jubileu</h4>
+                    <p>Gestão de saúde clínica e prontuários biológicos integrados sob a governança do Arsenal Clínico Salomão.</p>
+                </div>
             </section>
 
             <!-- 04. ESTÉTICA AVANÇADA -->
@@ -300,7 +298,7 @@
                 <h2 class="section-header"><span class="section-number">04</span> Estética Avançada</h2>
                 <div class="content-box">
                     <h4>Biotecnologia e Rejuvenescimento Celular</h4>
-                    <p>Aplicações estéticas com rigor fotônico e regenerativo de alta performance.</p>
+                    <p>Aplicações estéticas avançadas combinando fotobiomodulação, renovação de tecidos e rigor regenerativo de alta performance.</p>
                 </div>
             </section>
 
@@ -308,12 +306,12 @@
             <section id="sec-05" class="section-card">
                 <h2 class="section-header"><span class="section-number">05</span> DM Pet (Calculadora Por Animal)</h2>
                 <div class="content-box">
-                    <h4>Calculadora e Cadastro de Pets</h4>
-                    <p>Acompanhamento biológico e protocolos fotônicos calculados individualmente por animal.</p>
+                    <h4>Calculadora e Cadastro de Ficha Biológica</h4>
+                    <p>Acompanhamento biológico animal e protocolos fotônicos calculados dinamicamente por cada pet cadastrado.</p>
                     <div class="pet-calc-box">
                         <label for="qtd-pets" style="display:block; font-size: 0.85rem; color: #C9A84C;">Quantidade de Animais:</label>
                         <input type="number" id="qtd-pets" value="1" min="1" oninput="calcularPet()" style="background: #000; border: 1px solid #C9A84C; color: #fff; padding: 8px; border-radius: 6px; width: 100px; font-weight: bold; margin-top: 6px;">
-                        <div id="pet-total" class="price-tag" style="display:block; margin-top: 10px;">Total: R$ 149 (1 animal)</div>
+                        <div id="pet-total" class="price-tag" style="display:block; margin-top: 10px;">Total: R$ 149 (1 animal - R$ 149 cada)</div>
                         <button class="btn-checkout" onclick="contratarPet()">Contratar para o(s) Pet(s)</button>
                     </div>
                 </div>
@@ -324,9 +322,9 @@
                 <h2 class="section-header"><span class="section-number">06</span> DM Malha</h2>
                 <div class="content-box">
                     <h4>Logística e Infraestrutura Distribuída</h4>
-                    <p>Cotas comerciais e expansão de malha operacional em planos estruturados.</p>
-                    <button class="btn-checkout" onclick="iniciarCheckout('DM Malha - Plano Essencial', 399)">Plano R$ 399</button>
-                    <button class="btn-checkout" onclick="iniciarCheckout('DM Malha - Plano Soberano', 1499)" style="background: var(--neon-blue); color: #000;">Plano R$ 1.499</button>
+                    <p>Cotas comerciais para participantes e expansão da malha operacional em planos estruturados.</p>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Malha - Plano Essencial', 399)">Plano Essencial (R$ 399)</button>
+                    <button class="btn-checkout btn-blue" onclick="iniciarCheckout('DM Malha - Plano Soberano', 1499)">Plano Soberano (R$ 1.499)</button>
                 </div>
             </section>
 
@@ -335,9 +333,9 @@
                 <h2 class="section-header"><span class="section-number">07</span> DM Agricultura (Agro)</h2>
                 <div class="content-box">
                     <h4>Biotecnologia Agrícola e Solo Vivo</h4>
-                    <p>Protocolos biológicos para otimização de culturas e produtividade no campo.</p>
-                    <button class="btn-checkout" onclick="iniciarCheckout('DM Agro - Plano Essencial', 399)">Plano R$ 399</button>
-                    <button class="btn-checkout" onclick="iniciarCheckout('DM Agro - Plano Soberano', 1499)" style="background: var(--neon-blue); color: #000;">Plano R$ 1.499</button>
+                    <p>Protocolos biológicos avançados para otimização de culturas, proteção natural e produtividade do solo.</p>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Agro - Plano Essencial', 399)">Plano Essencial (R$ 399)</button>
+                    <button class="btn-checkout btn-blue" onclick="iniciarCheckout('DM Agro - Plano Soberano', 1499)">Plano Soberano (R$ 1.499)</button>
                 </div>
             </section>
 
@@ -346,7 +344,7 @@
                 <h2 class="section-header"><span class="section-number">08</span> Triunvirato & Governança</h2>
                 <div class="content-box">
                     <h4>Conselho Superior de Regência</h4>
-                    <p>Matriz de governança corporativa: Dr. Milagro's Hospedagem de Sites e Tratamento de Dados Ltda.</p>
+                    <p>Matriz de governança corporativa e institucional: Dr. Milagro's Hospedagem de Sites e Tratamento de Dados Ltda.</p>
                 </div>
             </section>
 
@@ -354,8 +352,12 @@
             <section id="sec-09" class="section-card">
                 <h2 class="section-header"><span class="section-number">09</span> Tecnologia & IA Salomão</h2>
                 <div class="content-box">
-                    <h4>Inteligência Artificial Salomão — Provisão Gratuita</h4>
-                    <p>Provisão tecnológica e espiritual 100% gratuita para servir a população sem cobranças. Limite Soberano de Chat: 1.000 palavras (7.000 caracteres) por interação.</p>
+                    <h4>Inteligência Artificial Salomão — Provisão Gratuita à População</h4>
+                    <p>Provisão tecnológica e espiritual 100% gratuita desenvolvida para servir a sociedade sem cobranças ou assinaturas. Limite Soberano de Chat: 1.000 palavras (7.000 caracteres) por interação.</p>
+                </div>
+                <div class="content-box">
+                    <h4>Engenharia Gênesis Tech</h4>
+                    <p>Infraestrutura de dados de alta velocidade e suporte de inteligência robótica (Avatar Robô Edward).</p>
                 </div>
             </section>
 
@@ -364,7 +366,7 @@
                 <h2 class="section-header"><span class="section-number">10</span> Membro Soberano (Afiliados)</h2>
                 <div class="content-box highlight-box">
                     <h4>Programa de Expansão e Prosperidade Divina</h4>
-                    <p>Estrutura de afiliação criada para abençoar a vida das pessoas com uma comissão de <strong>49%</strong> sobre as indicações e expansão do ecossistema.</p>
+                    <p>Estrutura de afiliação desenhada para abençoar vidas, oferecendo uma comissão de <strong>49%</strong> sobre a indicação e expansão de todos os serviços do ecossistema.</p>
                     <button class="btn-checkout" onclick="iniciarAfiliado()">Quero Ser Membro Soberano (49%)</button>
                 </div>
             </section>
@@ -375,7 +377,7 @@
         </footer>
     </div>
 
-    <!-- Script Unificado Embutido -->
+    <!-- Script de Inteligência da Página -->
     <script>
         function calcularPet() {
             var input = document.getElementById('qtd-pets');
@@ -389,16 +391,17 @@
         function contratarPet() {
             var qtd = document.getElementById('qtd-pets').value || 1;
             var total = qtd * 149;
-            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nProduto: DM Pet (' + qtd + ' animal/animais)\nValor: R$ ' + total + ',00\n\nRedirecionando para o checkout seguro...');
+            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nItem: DM Pet (' + qtd + ' animal/animais)\nValor Total: R$ ' + total + ',00\n\nConectando à página de checkout e ficha biológica...');
         }
 
         function iniciarCheckout(produto, valor) {
-            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nProduto: ' + produto + '\nValor: R$ ' + valor + ',00\n\nRedirecionando para o checkout seguro...');
+            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nItem: ' + produto + '\nValor: R$ ' + valor + ',00\n\nConectando à plataforma de pagamento seguro...');
         }
 
         function iniciarAfiliado() {
-            alert('PROGRAMA MEMBRO SOBERANO (49% COMISSÃO)\n\nIniciando cadastro de Afiliado Soberano...');
+            alert('PROGRAMA MEMBRO SOBERANO (49% COMISSÃO)\n\nIniciando cadastro oficial de Afiliado Soberano...');
         }
     </script>
 </body>
 </html>
+l
