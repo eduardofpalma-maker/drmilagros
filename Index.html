@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Milagro's | Ecossistema Biotecnológico & Gênesis Tech</title>
+    
+    <!-- PWA & Favicon -->
+    <meta name="theme-color" content="#C9A84C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Dr. Milagro's">
+    <meta name="google-site-verification" content="9MNSLiIQmSknQ95ay0GglvgJjdoIwZruZ8MQUQewhGg">
+
+    <!-- Fontes Soberanas -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #080808;
+            --card-bg: rgba(17, 24, 39, 0.85);
+            --neon-blue: #38bdf8;
+            --gold-accent: #C9A84C;
+            --gold-glow: rgba(201, 168, 76, 0.25);
+            --border-color: rgba(201, 168, 76, 0.3);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 50% 10%, #111827 0%, var(--bg-dark) 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
+
+        .portal-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 10px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .brand-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        .brand-subtitle {
+            font-size: 0.85rem;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .badge-zero {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.15);
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .nav-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: var(--gold-accent);
+            color: #000;
+            box-shadow: 0 0 12px var(--gold-accent);
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-header {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .section-number {
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--gold-accent);
+            padding: 14px 16px;
+            margin-top: 12px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box {
+            border-left: 3px solid var(--gold-accent);
+            background: rgba(201, 168, 76, 0.08);
+        }
+
+        .content-box h4 { color: #ffffff; margin-bottom: 6px; font-size: 1rem; }
+        .content-box p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+
+        .price-tag {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.2);
+            color: var(--gold-accent);
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        .btn-checkout {
+            display: inline-block;
+            background: var(--gold-accent);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.2s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-checkout:hover {
+            box-shadow: 0 0 12px var(--gold-accent);
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .video-badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .pet-calc-box {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portal-container">
+        
+        <header>
+            <div class="brand-logo">DR. MILAGRO'S</div>
+            <div class="brand-subtitle">Tecnologia Gênesis &bull; Biotecnologia & Governança</div>
+            <div class="badge-zero">&bull; PADRÃO ERRO ZERO &bull;</div>
+        </header>
+
+        <!-- Navegação pelas 10 Seções -->
+        <nav class="nav-menu">
+            <a href="#sec-01" class="nav-item">01. Método</a>
+            <a href="#sec-02" class="nav-item">02. Protocolos</a>
+            <a href="#sec-03" class="nav-item">03. ACS</a>
+            <a href="#sec-04" class="nav-item">04. Estética</a>
+            <a href="#sec-05" class="nav-item">05. DM Pet</a>
+            <a href="#sec-06" class="nav-item">06. DM Malha</a>
+            <a href="#sec-07" class="nav-item">07. DM Agro</a>
+            <a href="#sec-08" class="nav-item">08. Triunvirato</a>
+            <a href="#sec-09" class="nav-item">09. Tecnologia</a>
+            <a href="#sec-10" class="nav-item">10. Membro Soberano</a>
+        </nav>
+
+        <main>
+            <!-- 01. MÉTODO -->
+            <section id="sec-01" class="section-card">
+                <h2 class="section-header"><span class="section-number">01</span> Método das Sete Lâmpadas</h2>
+                <div class="content-box">
+                    <h4>Convergência Fotônica e Molecular</h4>
+                    <p>Integração de procaína com fotobiomodulação celular, soroterapia, fisioterapia robótica, fortalecimento, terapia ocupacional, psicologia e nutrição integrada.</p>
+                </div>
+            </section>
+
+            <!-- 02. PROTOCOLOS -->
+            <section id="sec-02" class="section-card">
+                <h2 class="section-header"><span class="section-number">02</span> Protocolos Fotônicos (Lâmpadas 04 a 07)</h2>
+                <div class="content-box">
+                    <h4>Lâmpada 04 — Fotobiomodulação Celular</h4>
+                    <p>Atendimento fotônico via aplicativo com Robô Edward Avatar.</p>
+                    <span class="price-tag">R$ 149</span>
+                </div>
+                <div class="content-box">
+                    <h4>Lâmpada 05 — Reabilitação Assistida por Robótica</h4>
+                    <p>Fisioterapia (R$ 149), Fortalecimento (R$ 99) e Terapia Ocupacional (R$ 99) com Robô Edward Avatar.</p>
+                </div>
+                <div class="content-box">
+                    <h4>Lâmpada 06 — Bioacupuntura Sistêmica</h4>
+                    <p>Estimulação bioenergética de precisão.</p>
+                    <span class="price-tag">R$ 149</span>
+                </div>
+                <div class="content-box">
+                    <h4>Lâmpada 07 — Saúde Mental & Nutrição Integrada</h4>
+                    <p>Psicologia (R$ 149) + Nutrição Aplicada (R$ 149).</p>
+                </div>
+                <div class="content-box highlight-box">
+                    <h4>Combo Imperador</h4>
+                    <p>Acesso completo a todos os protocolos fotônicos integrados.</p>
+                    <span class="price-tag">R$ 497</span>
+                    <button class="btn-checkout" onclick="iniciarCheckout('Combo Imperador', 497)">Adquirir Combo Imperador</button>
+                </div>
+            </section>
+
+            <!-- 03. ACS -->
+            <section id="sec-03" class="section-card">
+                <h2 class="section-header"><span class="section-number">03</span> ACS &bull; Arsenal Clínico Salomão</h2>
+                <div class="content-box">
+                    <h4>Experiência de Conexão Soberana (7 Vídeos de 21s)</h4>
+                    <p>Sete iluminações em vídeo de 21 segundos de alta profundidade para alinhar razão, saúde e espírito diretamente ao Reino.</p>
+                    <div class="video-grid">
+                        <div class="video-badge">Vídeo 01 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 02 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 03 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 04 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 05 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 06 &bull; 21s</div>
+                        <div class="video-badge">Vídeo 07 &bull; 21s</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04. ESTÉTICA AVANÇADA -->
+            <section id="sec-04" class="section-card">
+                <h2 class="section-header"><span class="section-number">04</span> Estética Avançada</h2>
+                <div class="content-box">
+                    <h4>Biotecnologia e Rejuvenescimento Celular</h4>
+                    <p>Aplicações estéticas com rigor fotônico e regenerativo de alta performance.</p>
+                </div>
+            </section>
+
+            <!-- 05. DM PET -->
+            <section id="sec-05" class="section-card">
+                <h2 class="section-header"><span class="section-number">05</span> DM Pet (Calculadora Por Animal)</h2>
+                <div class="content-box">
+                    <h4>Calculadora e Cadastro de Pets</h4>
+                    <p>Acompanhamento biológico e protocolos fotônicos calculados individualmente por animal.</p>
+                    <div class="pet-calc-box">
+                        <label for="qtd-pets" style="display:block; font-size: 0.85rem; color: #C9A84C;">Quantidade de Animais:</label>
+                        <input type="number" id="qtd-pets" value="1" min="1" oninput="calcularPet()" style="background: #000; border: 1px solid #C9A84C; color: #fff; padding: 8px; border-radius: 6px; width: 100px; font-weight: bold; margin-top: 6px;">
+                        <div id="pet-total" class="price-tag" style="display:block; margin-top: 10px;">Total: R$ 149 (1 animal)</div>
+                        <button class="btn-checkout" onclick="contratarPet()">Contratar para o(s) Pet(s)</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 06. DM MALHA -->
+            <section id="sec-06" class="section-card">
+                <h2 class="section-header"><span class="section-number">06</span> DM Malha</h2>
+                <div class="content-box">
+                    <h4>Logística e Infraestrutura Distribuída</h4>
+                    <p>Cotas comerciais e expansão de malha operacional em planos estruturados.</p>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Malha - Plano Essencial', 399)">Plano R$ 399</button>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Malha - Plano Soberano', 1499)" style="background: var(--neon-blue); color: #000;">Plano R$ 1.499</button>
+                </div>
+            </section>
+
+            <!-- 07. DM AGRICULTURA -->
+            <section id="sec-07" class="section-card">
+                <h2 class="section-header"><span class="section-number">07</span> DM Agricultura (Agro)</h2>
+                <div class="content-box">
+                    <h4>Biotecnologia Agrícola e Solo Vivo</h4>
+                    <p>Protocolos biológicos para otimização de culturas e produtividade no campo.</p>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Agro - Plano Essencial', 399)">Plano R$ 399</button>
+                    <button class="btn-checkout" onclick="iniciarCheckout('DM Agro - Plano Soberano', 1499)" style="background: var(--neon-blue); color: #000;">Plano R$ 1.499</button>
+                </div>
+            </section>
+
+            <!-- 08. TRIUNVIRATO -->
+            <section id="sec-08" class="section-card">
+                <h2 class="section-header"><span class="section-number">08</span> Triunvirato & Governança</h2>
+                <div class="content-box">
+                    <h4>Conselho Superior de Regência</h4>
+                    <p>Matriz de governança corporativa: Dr. Milagro's Hospedagem de Sites e Tratamento de Dados Ltda.</p>
+                </div>
+            </section>
+
+            <!-- 09. TECNOLOGIA -->
+            <section id="sec-09" class="section-card">
+                <h2 class="section-header"><span class="section-number">09</span> Tecnologia & IA Salomão</h2>
+                <div class="content-box">
+                    <h4>Inteligência Artificial Salomão — Provisão Gratuita</h4>
+                    <p>Provisão tecnológica e espiritual 100% gratuita para servir a população sem cobranças. Limite Soberano de Chat: 1.000 palavras (7.000 caracteres) por interação.</p>
+                </div>
+            </section>
+
+            <!-- 10. MEMBRO SOBERANO -->
+            <section id="sec-10" class="section-card">
+                <h2 class="section-header"><span class="section-number">10</span> Membro Soberano (Afiliados)</h2>
+                <div class="content-box highlight-box">
+                    <h4>Programa de Expansão e Prosperidade Divina</h4>
+                    <p>Estrutura de afiliação criada para abençoar a vida das pessoas com uma comissão de <strong>49%</strong> sobre as indicações e expansão do ecossistema.</p>
+                    <button class="btn-checkout" onclick="iniciarAfiliado()">Quero Ser Membro Soberano (49%)</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Dr. Milagro's Corp & Gênesis Tech. Todos os direitos reservados. Padrão Erro Zero.</p>
+        </footer>
+    </div>
+
+    <!-- Script Unificado Embutido -->
+    <script>
+        function calcularPet() {
+            var input = document.getElementById('qtd-pets');
+            var display = document.getElementById('pet-total');
+            var qtd = parseInt(input.value) || 1;
+            if (qtd < 1) { qtd = 1; input.value = 1; }
+            var total = qtd * 149;
+            display.innerHTML = 'Total: R$ ' + total + ' (' + qtd + ' animal/animais - R$ 149 cada)';
+        }
+
+        function contratarPet() {
+            var qtd = document.getElementById('qtd-pets').value || 1;
+            var total = qtd * 149;
+            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nProduto: DM Pet (' + qtd + ' animal/animais)\nValor: R$ ' + total + ',00\n\nRedirecionando para o checkout seguro...');
+        }
+
+        function iniciarCheckout(produto, valor) {
+            alert('GATEWAY DE PAGAMENTO DR. MILAGRO\'S\n\nProduto: ' + produto + '\nValor: R$ ' + valor + ',00\n\nRedirecionando para o checkout seguro...');
+        }
+
+        function iniciarAfiliado() {
+            alert('PROGRAMA MEMBRO SOBERANO (49% COMISSÃO)\n\nIniciando cadastro de Afiliado Soberano...');
+        }
+    </script>
+</body>
+</html>
